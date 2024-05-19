@@ -1,0 +1,106 @@
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.app-bar {
+    background-color: #6200EA; /* Cor roxa para a barra */
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between; /* Ajustado para espaço entre itens */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para o posicionamento do menu dropdown */
+}
+
+.app-bar h1 {
+    margin: 0;
+    font-size: 2em;
+    flex-grow: 1; /* Permite que o título ocupe o espaço disponível */
+    text-align: center; /* Centraliza o título */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 2; /* Garante que o botão esteja acima do menu dropdown */
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1; /* Garante que o menu esteja abaixo do botão */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: calc(100vh - 70px); /* Altura total da viewport menos a altura da app bar */
+}
+
+.content-link {
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Faz o link se comportar como um bloco */
+    width: 100%; /* Garante que o link ocupe toda a largura disponível */
+    max-width: 600px; /* Define um tamanho máximo */
+}
+
+.content {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s; /* Adiciona uma transição suave para transformações */
+}
+
+.content:hover {
+    transform: translateY(-5px); /* Move o container para cima ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #555;
+}
